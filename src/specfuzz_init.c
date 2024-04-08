@@ -77,7 +77,8 @@ void specfuzz_handler(int signo, siginfo_t *siginfo, void *ucontext) {
         // For the time being, we ignore these cases
         STAT_INCREMENT(stat_signal_overflow);
     } else {
-#if REPORT_MEMORY_ERRORS == 1
+#if 0
+//#if REPORT_MEMORY_ERRORS == 1
         // Print information about the signal
         // Note: the calls to fprintf are not multithreading-safe
 

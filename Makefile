@@ -5,7 +5,7 @@ REPORT_CONTROL_FLOW_ERRORS ?= 1
 REPORT_WITH_OFFSET ?= 0
 ENABLE_COVERAGE ?= 1
 COVERAGE_MEMORY_ERRORS ?= 1
-COVERAGE_CONTROL_FLOW_ERRORS ?= 1
+COVERAGE_CONTROL_FLOW_ERRORS ?= 0
 ENABLE_SANITY_CHECKS ?= 1
 ENABLE_STATS ?= 0
 ENABLE_SEQUENTIAL_SIMULATION ?= 0
@@ -91,6 +91,7 @@ patch_hongg: $(HONGG_PATCH)
 	cp install/patches/honggfuzz/fuzz.c $(HONGG_SRC)/fuzz.c
 	cp install/patches/honggfuzz/honggfuzz.h $(HONGG_SRC)/honggfuzz.h
 	cp install/patches/honggfuzz/trace.c $(HONGG_SRC)/linux/trace.c
+	cp install/patches/honggfuzz/arch.c $(HONGG_SRC)/linux/arch.c
 	sed -i -e 's:_HF_PERSISTENT_SIG:"":g' $(HONGG_SRC)/libhfuzz/fetch.c
 
 rebuild_hongg:

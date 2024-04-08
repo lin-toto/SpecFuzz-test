@@ -141,6 +141,10 @@ while [ "$#" -gt 0 ]; do
             $CC -v
             exit $?
         ;;
+        -MT|-MF)
+            CFLAGS="$CFLAGS $1 $2"
+            shift
+        ;;
         *)
             if [ -z "$OUTPUT" ]; then
                 CFLAGS="$CFLAGS $1"
