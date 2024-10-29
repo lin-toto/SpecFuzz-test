@@ -40,6 +40,8 @@ RUN apt-get update && apt-get install -y cmake
 #RUN apt-get install -y libc6:i386 
 RUN apt-get install gcc-multilib -y
 
+RUN apt-get install bc -y
+
 RUN useradd --uid 1000 lin
 USER lin
 WORKDIR /workspace
