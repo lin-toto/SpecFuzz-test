@@ -28,8 +28,8 @@ cd ${BUILD_DIR} || exit
 cmake -G "Unix Makefiles" -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_INSTALL_PREFIX=${BUILD_DIR} ../src
 
 # install
-make -j88
-make -j88 install
+make -j8
+make -j8 install
 
 # ============
 # CLang
@@ -47,8 +47,8 @@ cd ${BUILD_DIR} || exit
 cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_INSTALL_PREFIX=${BUILD_DIR} ../src
 
 # install
-make -j88
-make -j88 install
+make -j8
+make -j8 install
 ln -sf ${BUILD_DIR}/bin/clang /usr/bin/clang
 ln -sf ${BUILD_DIR}/bin/clang++ /usr/bin/clang++
 
