@@ -42,8 +42,7 @@ RUN apt-get install gcc-multilib -y
 
 RUN apt-get install bc -y
 
-RUN useradd --uid 1000 lin
-USER lin
+RUN mkdir /workspace
 WORKDIR /workspace
 
 ENV SF_CFLAGS="--enable-coverage -DNDEBUG -L/honggfuzz/libhfuzz -L/honggfuzz/libhfcommon  -lhfuzz -lhfcommon"
