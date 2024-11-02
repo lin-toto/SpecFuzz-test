@@ -29,7 +29,7 @@ RUN make install & make install_tools
 RUN apt-get install -y autoconf automake libtool
 RUN apt-get install -y zlib1g-dev
 
-RUn apt-get update
+RUN apt-get update
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 6AF7F09730B3F0A4
 RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg
 RUN apt-get install -y software-properties-common lsb-release
