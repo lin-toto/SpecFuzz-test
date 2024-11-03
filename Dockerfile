@@ -23,7 +23,7 @@ COPY ./example /specfuzz/example
 
 ENV HONGG_SRC=/honggfuzz
 WORKDIR /specfuzz
-RUN make
+RUN make -j8
 RUN make install & make install_tools
 
 RUN apt-get install -y autoconf automake libtool
