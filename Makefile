@@ -65,7 +65,7 @@ patch_llvm: $(LLVM_PATCH)
 	cp install/patches/llvm/X86SpeculativeLoadHardening.cpp $(LLVM_SRC)/lib/Target/X86/
 
 rebuild_llvm:
-	make -j -C $(LLVM_BUILD)
+	make -j8 -C $(LLVM_BUILD)
 
 install_specfuzz:
 	cp -u install/wrapper.sh /usr/bin/clang-sf
